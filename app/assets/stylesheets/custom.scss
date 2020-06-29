@@ -1,0 +1,62 @@
+@import "bulma";
+
+$color: #147de8;
+$bolor: #2b67b1;
+$white: #fff;
+
+.my-link {
+  background-color: $color;
+}
+
+.navbar-brand .title {
+  color: white;
+}
+
+// round images
+.image {
+  border-radius: 50%;
+  img {
+    border-radius: 50%;
+  }
+}
+
+.notification:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.df {
+  display: flex;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.is-imo {
+  background-color: $bolor;
+}
+
+.white {
+  color: $white;
+}
+
+.wrapper {
+  display: flex;
+  flex-basis: 100%;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.nxt-wrap {
+  text-align: center;
+  width: 50%;
+  h1 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  .cta {
+    font-size: 17px;
+  }
+}
+
