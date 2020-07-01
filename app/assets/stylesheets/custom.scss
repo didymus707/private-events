@@ -1,11 +1,15 @@
 @import "bulma";
 
-$color: #147de8;
-$bolor: #2b67b1;
+$color: #02172b;
+$bolor: #a21731;
 $white: #fff;
 
 .my-link {
   background-color: $color;
+}
+
+.mt {
+  margin-top: 15px;
 }
 
 .navbar-brand .title {
@@ -34,6 +38,7 @@ $white: #fff;
 
 .is-imo {
   background-color: $bolor;
+  border: none;
 }
 
 .white {

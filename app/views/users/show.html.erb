@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<div class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <h1 class="title is-size-1">Eventter</h1>
+            <div class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p class="is-size-4 is-family-primary">Name: <%= @user.name %></p>
+                  <p class="is-size-4 is-family-primary">Email: <%= @user.email %></p>
+                </div>
+              </div>
+            </div>
+
+          <%= link_to 'Back', root_path %>
+      </div>
+    </div>
+  </div>
+</div>
