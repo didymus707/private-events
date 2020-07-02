@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @user_events = @user.hosted_events
   end
 
   def new
@@ -14,7 +15,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = 'Welcome to Eventte'
-      redirect_to root_path
+      redirect_to :user
     else
       render 'new'
     end

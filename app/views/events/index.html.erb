@@ -1,0 +1,20 @@
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <h2 class="title">All Events</h2>
+      <% @events.each do | event | %>
+        <div class="box">
+          <article class="media">
+            <div class="media-content">
+              <div class="content">
+                <strong><%= event.location %></strong><br />
+                <p><%= event.description %></p><br />
+                <small><%= event.date %></small>
+              </div>
+            </div>
+          </article>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

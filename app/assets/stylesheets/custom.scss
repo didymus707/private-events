@@ -1,7 +1,8 @@
 @import "bulma";
 
 $color: #02172b;
-$bolor: #a21731;
+$bolor: #a21791;
+// $bolor: #a21731;
 $white: #fff;
 
 .my-link {
@@ -62,6 +63,12 @@ $white: #fff;
   }
   .cta {
     font-size: 17px;
+    a {
+      color: #a21791;
+      &:hover {
+        color: teal;
+      }
+    }
   }
 }
 
