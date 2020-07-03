@@ -1,10 +1,8 @@
 class SessionsController < ApplicationController
-
-  def new
-  end
+  def new; end
 
   def create
-    @user = User.find_by(name: params[:sessions][:name].capitalize())
+    @user = User.find_by(name: params[:sessions][:name].capitalize)
 
     if @user
       log_in @user
