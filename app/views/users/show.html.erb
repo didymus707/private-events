@@ -11,8 +11,10 @@
               <article class="media">
                 <div class="media-content">
                   <div class="content">
-                    <h4>Name</h4>
-                    <p class="has-text-left"><strong><%= event.host.name %></strong></p>
+                    <% if !current_user %>
+                      <h4>Host</h4>
+                      <p class="has-text-left"><strong><%= event.host.name %></strong></p>
+                    <% end %>
                     <h5>Event Description</h5>
                     <p><%= event.description %></p><br />
                     <div class="columns">
