@@ -9,10 +9,21 @@
     <% unless logged_in? %>
       <div class="cta">
         <ul>
-          <li><%= link_to 'Sign Up', new_user_path %></a> if you don't hava an account</li>
-          <li><%= link_to 'Sign In', login_path %></a> if you do</li>
+          <li><a><%= link_to 'Sign Up', new_user_path %></a> if you don't hava an account</li>
+          <li><a><%= link_to 'Sign In', login_path %></a> if you do</li>
         </ul>
       </div>
     <% end %>
+
+      <% if logged_in? %>
+        <div class="tabs is-toggle is-fullwidth is-large mt-1">
+          <ul>
+            <li class="mt-r"><%= link_to 'All Events', events_path %></li>
+            <li class="mt-r"><%= link_to 'My Events', user_path(current_user.id) %></li>
+            <li class="mt-r"><%= link_to 'Attending', '#' %></li>
+          </ul>
+        </div>
+      <% end %>
+
   </main>
 </div>

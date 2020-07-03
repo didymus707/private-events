@@ -1,20 +1,68 @@
 <section class="section">
   <div class="container">
-    <div class="columns">
-      <h2 class="title">All Events</h2>
-      <% @events.each do | event | %>
-        <div class="box">
-          <article class="media">
-            <div class="media-content">
-              <div class="content">
-                <strong><%= event.location %></strong><br />
-                <p><%= event.description %></p><br />
-                <small><%= event.date %></small>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title has-text-centered">All Events</h2>
+          <% @events.each do | event | %>
+            <% if event.date < Time.zone.now %>
+              <div class="column">
+                <h2 class="title is-medium">Past Events</h2>
+                <div class="box apr">
+                  <article class="media">
+                    <div class="media-content">
+                      <div class="content">
+                        <% if !current_user %>
+                          <h4>Host</h4>
+                          <p class="has-text-left"><strong><%= event.host.name %></strong></p>
+                        <% end %>
+                        <h5>Event Description</h5>
+                        <p><%= event.description %></p><br />
+                        <div class="columns">
+                          <div class="column is-half">
+                            <h6 class="has-text-left">Date</h6>
+                            <small><%= event.date %></small>
+                          </div>
+                          <div class="column is-half">
+                            <h6 class="has-text-right">Location</h6>
+                            <p class="has-text-right"><%= event.location %></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
               </div>
-            </div>
-          </article>
-        </div>
-      <% end %>
+            <% else %>
+              <div class="column">
+                <h2 class="title is-medium">Upcoming Events</h2>
+                <div class="box bg-c">
+                  <article class="media">
+                    <div class="media-content">
+                      <div class="content">
+                        <% if !current_user %>
+                          <h4>Host</h4>
+                          <p class="has-text-left"><strong><%= event.host.name %></strong></p>
+                        <% end %>
+                        <h5>Event Description</h5>
+                        <p><%= event.description %></p><br />
+                        <div class="columns">
+                          <div class="column is-half">
+                            <h6 class="has-text-left">Date</h6>
+                            <small><%= event.date %></small>
+                          </div>
+                          <div class="column is-half">
+                            <h6 class="has-text-right">Location</h6>
+                            <p class="has-text-right"><%= event.location %></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+      </div>
     </div>
   </div>
 </section>

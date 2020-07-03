@@ -7,13 +7,13 @@
 
         <%= simple_form_for(@event) do |f| %>
           <%= f.error_notification %>
-          <div id="error-explanation">
-            <ul>
-              <% @event.errors.full_messages.each do |error| %>
-                <li class="notification"><%= error %></li>
-              <% end %>
-            </ul>
-          </div>
+            <div id="error-explanation">
+              <ul>
+                <% @event.errors.full_messages.each do |error| %>
+                  <li class="notification"><%= error %></li>
+                <% end %>
+              </ul>
+            </div>
 
             <div class="field">
               <div class="control">
@@ -57,7 +57,7 @@
 
         <% end %>
         <br />
-        <%#= render "devise/shared/links" %>
+    
       </div>
     </div>
   </div>

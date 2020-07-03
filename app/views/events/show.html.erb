@@ -9,8 +9,10 @@
             <article class="media">
               <div class="media-content">
                 <div class="content">
-                  <h4>Name</h4>
+                <% if !current_user %>
+                  <h4>Host</h4>
                   <p class="has-text-left"><strong><%= @event.host.name %></strong></p>
+                <% end %>
                   <h5>Event Description</h5>
                   <p><%= @event.description %></p><br />
                   <div class="columns">
@@ -26,6 +28,23 @@
                 </div>
               </div>
             </article>
+          </div>
+
+          <div class="panel gw">
+            <p class="panel-heading">Attendees</p>
+            
+            <ul class="panel-block">
+              <li>Joe Blow</li>
+            </ul>
+            <ul class="panel-block">
+              <li>Joe Blow</li>
+            </ul>
+            <ul class="panel-block">
+              <li>Joe Blow</li>
+            </ul>
+            <ul class="panel-block">
+              <li>Joe Blow</li>
+            </ul>
           </div>
 
           <%= link_to 'Back', root_path %>

@@ -3,6 +3,9 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @user_events = @user.hosted_events
+    @attending = @user.attended_events
+    @upcoming_events = @user_events.upcoming_events(Time.zone.now)
+    @past_events = @user_events.past_events(Time.zone.now)
   end
 
   def new

@@ -33,7 +33,15 @@
             </div>
           <% end %>
 
-          <%= link_to 'Back', root_path %>
+          <div class="columns">
+            <div class="column is-half">
+              <h6 class="has-text-left"><%= link_to 'All Events', events_path %></h6>
+            </div>
+            <div class="column is-half">
+              <h6 class="has-text-right"><%= link_to 'Back', root_path %></h6>
+            </div>
+          </div>
+
       </div>
     </div>
   </div>
