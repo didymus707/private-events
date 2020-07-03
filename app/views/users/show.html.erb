@@ -2,17 +2,34 @@
 
 <div class="section">
   <div class="container">
-    <div class="columns is-centered">
+    <div class="columns ">
       <div class="column is-half">
-        <h1 class="title is-size-1">Eventter</h1>
-            <div class="media">
-              <div class="media-content">
-                <div class="content">
-                  <p class="is-size-4 is-family-primary">Name: <%= @user.name %></p>
-                  <p class="is-size-4 is-family-primary">Events: <%= @user_events %></p>
+        <h1 class="title is-size-1">My Events</h1>
+           
+          <% @user_events.each do | event | %>
+            <div class="box bg-c">
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h4>Name</h4>
+                    <p class="has-text-left"><strong><%= event.host.name %></strong></p>
+                    <h5>Event Description</h5>
+                    <p><%= event.description %></p><br />
+                    <div class="columns">
+                      <div class="column is-half">
+                        <h6 class="has-text-left">Date</h6>
+                        <small><%= event.date %></small>
+                      </div>
+                      <div class="column is-half">
+                        <h6 class="has-text-right">Location</h6>
+                        <p class="has-text-right"><%= event.location %></p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </article>
             </div>
+          <% end %>
 
           <%= link_to 'Back', root_path %>
       </div>

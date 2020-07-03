@@ -9,8 +9,8 @@
     <% unless logged_in? %>
       <div class="cta">
         <ul>
-          <li><a href="#">Sign Up</a> if you don't hava an account</li>
-          <li><a href="#">Sign In</a> if you do</li>
+          <li><%= link_to 'Sign Up', new_user_path %>Sign Up</a> if you don't hava an account</li>
+          <li><%= link_to 'Sign In', login_path %>Sign In</a> if you do</li>
         </ul>
       </div>
     <% end %>

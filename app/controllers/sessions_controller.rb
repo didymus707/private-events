@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
     if @user
       log_in @user
-      redirect_to root_path
+      redirect_to user_path(current_user.id)
     else
       flash[:danger] = "Incorrect name or Sign up if you don't have an account"
       render 'new'
