@@ -7,7 +7,7 @@
         <h1 class="title is-size-1 has-text-centered">My Events</h1>
         <div class="columns">
           <div class="column is-half">
-            <% @upcoming.each do | event | %>
+            <% @past.each do | event | %>
               <div class="box bg-c">
                 <article class="media">
                   <div class="media-content">
@@ -34,8 +34,9 @@
               </div>
             <% end %>
           </div>
+
           <div class="column is-half">
-            <% @past.each do | event | %>
+            <% @upcoming.each do | event | %>
               <div class="box bg-c">
                 <article class="media">
                   <div class="media-content">
