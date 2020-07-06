@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  
   def index
     @events = Event.all.order('created_at DESC')
     @past = Event.past_events(Time.zone.now).order('date DESC')
@@ -7,8 +8,8 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    # @user_events = User.find_by(id: @event.id).hosted_events
     @attendees = @event.attendees
+    # @user_events = User.find_by(id: @event.id).hosted_events
   end
 
   def new

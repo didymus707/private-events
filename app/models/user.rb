@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :attended_events, through: :event_attendances
   has_many :hosted_events, foreign_key: :host_id, class_name: 'Event'
 
-  has_many :guests, class_name: 'User', foreign_key: 'anchor_id'
-  belongs_to :anchor, class_name: 'User', optional: true
+  # has_many :guests, class_name: 'User', foreign_key: 'anchor_id'
+  # belongs_to :anchor, class_name: 'User', optional: true
+
+
 end

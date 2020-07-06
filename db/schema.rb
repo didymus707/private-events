@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_04_002213) do
+ActiveRecord::Schema.define(version: 2020_07_03_092432) do
 
   create_table "event_attendances", force: :cascade do |t|
     t.integer "attended_event_id"
@@ -36,12 +36,9 @@ ActiveRecord::Schema.define(version: 2020_07_04_002213) do
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "anchor_id"
-    t.index ["anchor_id"], name: "index_users_on_anchor_id"
   end
 
   add_foreign_key "event_attendances", "events", column: "attended_event_id"
   add_foreign_key "event_attendances", "users", column: "event_attendee_id"
   add_foreign_key "events", "users", column: "host_id"
-  add_foreign_key "users", "users", column: "anchor_id"
 end
