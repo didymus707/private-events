@@ -9,6 +9,7 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @attendees = @event.attendees
+    @users = User.all.to_a
     # @user_events = User.find_by(id: @event.id).hosted_events
   end
 

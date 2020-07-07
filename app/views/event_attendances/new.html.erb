@@ -1,0 +1,13 @@
+<%= form_for(@event_attendance) do |f| %>
+  <div class="row">
+    <%= f.label :event_id %>
+    <%= f.collection_select :event_id, Event.all, :id, :name, prompt: true %>
+  </div>
+
+  <div class="row">
+    <%= f.label :user_id %>
+    <%= f.collection_select :user_id, User.where.not(id: @invitation.inviter.id), :id, :name, prompt: true %>
+  </div>
+
+  <%= f.submit %>
+<% end %>

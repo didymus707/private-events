@@ -30,6 +30,18 @@
             </article>
           </div>
 
+         <%= simple_form_for(@users) do |f| %>
+          
+
+          <div class="row">
+            <%= f.label :user_id %>
+            <%= f.collection_select :user_id, User.all, :id, :name, prompt: true %>
+          </div>
+
+          <%= f.submit %>
+         <% end %>
+
+
           <div class="panel gw">
             <p class="panel-heading">Attendees</p>
             
