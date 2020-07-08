@@ -5,12 +5,14 @@
       <article class="media">
         <div class="media-content">
           <div class="content">
-            <% if current_user.id != event.host_id %>
-              <div class="is-flex jc-spb">
+            <div class="is-flex jc-spb">
+              <% if current_user.id != event.host_id %>
                 <h4 >Host</h4>
                 <p class="is-normal"><strong><%= event.host.name %></strong></p>
-              </div>
-            <% end %>
+              <% else %>
+                <h4>Attending</h4>
+              <% end %>
+            </div>
             <h5>Event Description</h5>
             <p><%= event.description %></p><br />
             <div class="columns">
