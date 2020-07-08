@@ -4,7 +4,7 @@ class EventAttendancesController < ApplicationController
   end
 
   def create
-    @event_attendance = current_user.event_attendances.build(attendants_params)
+    @event_attendance = EventAttendance.new(attendants_params)
     if @event_attendance.save
       redirect_to current_user
     else

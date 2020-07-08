@@ -1,13 +1,13 @@
-<%= form_for(@event_attendance) do |f| %>
-  <div class="row">
-    <%= f.label :event_id %>
-    <%= f.collection_select :event_id, Event.all, :id, :name, prompt: true %>
-  </div>
+<div class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-4">
 
-  <div class="row">
-    <%= f.label :user_id %>
-    <%= f.collection_select :user_id, User.where.not(id: @invitation.inviter.id), :id, :name, prompt: true %>
-  </div>
+        <h2 class="title is-2">Invite Users</h2>
 
-  <%= f.submit %>
-<% end %>
+        <%= render 'partials/invite_form' %>
+
+      </div>
+    </div>
+  </div>
+</div>

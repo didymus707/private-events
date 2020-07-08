@@ -23,6 +23,7 @@
                     <div class="column is-half">
                       <h6 class="has-text-right">Location</h6>
                       <p class="has-text-right"><%= @event.location %></p>
+                      <%= link_to 'Invite Others', new_event_attendance_path%>
                     </div>
                   </div>
                 </div>
@@ -30,32 +31,14 @@
             </article>
           </div>
 
-         <%= simple_form_for(@users) do |f| %>
-          
-
-          <div class="row">
-            <%= f.label :user_id %>
-            <%= f.collection_select :user_id, User.all, :id, :name, prompt: true %>
-          </div>
-
-          <%= f.submit %>
-         <% end %>
-
 
           <div class="panel gw">
             <p class="panel-heading">Attendees</p>
             
             <ul class="panel-block">
-              <li>Joe Blow</li>
-            </ul>
-            <ul class="panel-block">
-              <li>Joe Blow</li>
-            </ul>
-            <ul class="panel-block">
-              <li>Joe Blow</li>
-            </ul>
-            <ul class="panel-block">
-              <li>Joe Blow</li>
+              <% @attendees.each do | attendee | %>
+                <li><%= attendee.name %></li>
+              <% end %>
             </ul>
           </div>
 

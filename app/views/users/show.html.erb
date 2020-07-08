@@ -8,7 +8,7 @@
         <div class="columns">
           <div class="column is-half">
             <% @past.each do | event | %>
-              <div class="box bg-c">
+              <div class="box gw">
                 <article class="media">
                   <div class="media-content">
                     <div class="content">
@@ -21,13 +21,13 @@
                       <div class="columns">
                         <div class="column is-half">
                           <h6 class="has-text-left">Date</h6>
-                          <small><%= event.date %></small>
+                          <p class="has-text-left"><small><%= event.date %></small></p>
+                          <small class="has-text-left has-text-danger">Event has passed</small>
                         </div>
                         <div class="column is-half">
                           <h6 class="has-text-right">Location</h6>
                           <p class="has-text-right"><%= event.location %></p>
-                          <!--<p class="has-text-right has-text-light"><%= link_to 'Show', event_path(event.id) %></p>-->
-                          <%= link_to 'Show', event_path(event.id) %>
+                          <p class="has-text-right has-text-light"><%= link_to 'Show', event_path(event.id) %></p>
                         </div>
                       </div>
                     </div>

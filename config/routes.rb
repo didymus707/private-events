@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :users, only:[:new, :create, :show]
   resources :events, except:[:update, :edit]
-  resources :event_attendances, only:[:new, :create, :show]
+  resources :event_attendances, only:[:new, :create]
   
   root to: "homepage#home"
 end

@@ -1,0 +1,31 @@
+<div class="column is-half">
+  <h2 class="title is-medium">Past Events</h2>
+  <% @past.each do | event | %>
+    <div class="box gw">
+      <article class="media">
+        <div class="media-content">
+          <div class="content">
+            <% if current_user.id != event.host_id %>
+              <div class="is-flex jc-spb">
+                <h4 >Host</h4>
+                <p class="is-normal"><strong><%= event.host.name %></strong></p>
+              </div>
+            <% end %>
+            <h5>Event Description</h5>
+            <p><%= event.description %></p><br />
+            <div class="columns">
+              <div class="column is-half">
+                <h6 class="has-text-left">Date</h6>
+                <small><%= event.date %></small>
+              </div>
+              <div class="column is-half">
+                <h6 class="has-text-right">Location</h6>
+                <p class="has-text-right"><%= event.location %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  <% end %>
+</div>
