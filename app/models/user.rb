@@ -10,5 +10,4 @@ class User < ApplicationRecord
 
   has_many :invitations, class_name: 'Invitation', foreign_key: :event_attendee_id
   has_many :sent_invites, class_name: 'Invitation', foreign_key: :host_id
-
 end

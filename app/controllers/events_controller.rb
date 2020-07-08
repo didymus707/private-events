@@ -1,5 +1,4 @@
 class EventsController < ApplicationController
-  
   def index
     @events = Event.all.order('created_at DESC')
     @past = Event.past_events(Time.zone.now).order('date DESC')

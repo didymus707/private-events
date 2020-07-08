@@ -17,5 +17,4 @@ class Event < ApplicationRecord
   # def self.upcoming_events(time)
   #   where("date > ?", time)
   # end
-  
 end

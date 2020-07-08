@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  
   def show
     @user = User.find(params[:id])
     @user_events = @user.hosted_events.order('date DESC')
