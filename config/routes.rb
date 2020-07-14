@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+  get '/attend', to: 'event_attendances#new'
+  post '/attend', to: 'event_attendances#create'
 
   resources :users, only:[:new, :create, :show]
   resources :events, except:[:update, :edit]
-  resources :event_attendances, only:[:new, :create]
   
   root to: "homepage#home"
 end

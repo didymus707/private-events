@@ -1,4 +1,4 @@
-<%= simple_form_for(@event_attendance) do |f| %>
+<%= simple_form_for(@event_attendance, url: attend_path) do |f| %>
   <%= f.error_notification %>
 
   <div id="error-explanation">
@@ -41,17 +41,6 @@
       </div>
     </div>
   </div>
-
-  <%#= form_for(@event_attendance) do |f| %>
-  <!--<div class="row">
-    <%#= f.label :attended_event_id %>
-    <%#= f.collection_select :attended_event_id, Event.all, :id, :description, prompt: true %>
-  </div>
-
-  <div class="row">
-    <%#= f.label :event_attendee_id %>
-    <%#= f.collection_select :event_attendee_id, User.where.not(id: current_user.id), :id, :name, prompt: true %>
-  </div>-->
 
   <div class="field">
     <div class="control">

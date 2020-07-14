@@ -34,15 +34,25 @@ RSpec.describe 'Users' do
     end
   end
 
-  def create_events(_new_event)
+  def create_events(event)
     visit new_events_path
 
     within '.column' do
       fill_in 'event_description', with: event[description]
-      fill_in 'event_description', with: event[location]
-      fill_in 'event_description', with: event[date]
+      fill_in 'event_location', with: event[location]
+      fill_in 'event_date', with: event[date]
 
       click_button 'Create Event'
+    end
+  end
+
+  def manage_events(user, event)
+    visit attend_path
+
+    within '.column' do
+      fill_in 'event_attendance_id', with: event[description]
+      fill_in 'event_attendee_id', with: user.name
+
     end
   end
 end
