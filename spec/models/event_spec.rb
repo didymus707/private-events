@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Event, type: :model do
-
-  # let (:new_event) { FactoryBot.build(:event) }
   
   describe 'Event Associations' do
     it { should belong_to(:host) }
