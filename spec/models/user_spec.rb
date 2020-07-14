@@ -24,11 +24,7 @@ RSpec.describe User, type: :model do
       new_user.email = ''
       expect(new_user).not_to be_valid
     end
-
-    it 'should be a valid email' do
-      new_user.email = 'jidjd.com'
-      expect(new_user).not_to be_valid
-    end
+    
   end
 
   # pending "add some examples to (or delete) #{__FILE__}"
