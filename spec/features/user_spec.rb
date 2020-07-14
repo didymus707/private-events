@@ -5,12 +5,12 @@ RSpec.describe 'Users' do
   let(:new_event) { FactoryBot.create(:event) }
 
   def new_user
-    { name: Faker::Name.name, email: Faker::Internet.email } 
+    { name: Faker::Name.name, email: Faker::Internet.email }
   end
 
   def event
-    { 
-      name: Faker::Address.building_number, 
+    {
+      name: Faker::Address.building_number,
       date: Faker::Date.between(from: 1.year.ago, to: 1.year.from_now),
       description: Faker::Lorem.sentence
     }
@@ -18,7 +18,7 @@ RSpec.describe 'Users' do
 
   def sign_up(new_user)
     within '.column' do
-      fill_in 'user[name]', with: new_user[name] 
+      fill_in 'user[name]', with: new_user[name]
       fill_in 'user[email]', with: new_user[email]
 
       click_button 'Sign up'
@@ -31,10 +31,10 @@ RSpec.describe 'Users' do
       fill_in 'user_name', with: user.name
 
       click_button 'Log in'
-    end 
+    end
   end
 
-  def create_events(new_event)
+  def create_events(_new_event)
     visit new_events_path
 
     within '.column' do

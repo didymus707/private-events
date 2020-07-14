@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
-  let (:new_user) { FactoryBot.build(:user) }
+  let(:new_user) { FactoryBot.build(:user) }
 
   describe 'User Associations' do
     it { should have_many(:hosted_events) }
@@ -24,7 +23,6 @@ RSpec.describe User, type: :model do
       new_user.email = ''
       expect(new_user).not_to be_valid
     end
-    
   end
 
   # pending "add some examples to (or delete) #{__FILE__}"

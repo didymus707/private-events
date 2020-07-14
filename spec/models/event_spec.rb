@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Event, type: :model do
-  
   describe 'Event Associations' do
     it { should belong_to(:host) }
     it { should have_many(:event_attendees) }
@@ -13,7 +12,6 @@ RSpec.describe Event, type: :model do
     it { should validate_presence_of(:date) }
     it { should validate_presence_of(:description) }
   end
-
 
   # pending "add some examples to (or delete) #{__FILE__}"
 end
