@@ -52,7 +52,6 @@ RSpec.describe 'Users' do
     within '.column' do
       fill_in 'event_attendance_id', with: event[description]
       fill_in 'event_attendee_id', with: user.name
-
     end
   end
 end
