@@ -10,8 +10,8 @@ RSpec.describe User, type: :model do
     it { should have_many(:event_attendances) }
   end
 
-  describe 'User Validations' do
-    it 'should have a name and an email' do
+  describe 'Validations' do
+    it 'should have a name' do
       expect(new_user).to be_valid
     end
 
