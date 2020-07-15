@@ -1,6 +1,8 @@
 FactoryBot.define do
-  factory :user do
-    name { Faker::Name.name }
-    email { Faker::Internet.email }
+  factory :user, aliases: [:host, :event_attendee] do
+    name { 'Joe' }
+    email { "#{name}@email.com" }
+
+    association :hosted_events, factory: :event
   end
 end

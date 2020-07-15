@@ -22,6 +22,7 @@ RSpec.describe 'Users' do
       fill_in 'user[email]', with: new_user[email]
 
       click_button 'Sign up'
+      expect(page).to have_content('Logout')
     end
   end
 
@@ -31,6 +32,7 @@ RSpec.describe 'Users' do
       fill_in 'user_name', with: user.name
 
       click_button 'Log in'
+      expect(page).to have_css 'h1', text: 'My Events'
     end
   end
 
@@ -43,6 +45,7 @@ RSpec.describe 'Users' do
       fill_in 'event_date', with: event[date]
 
       click_button 'Create Event'
+      expect(page).to have_css 'h1', text: 'My Events'
     end
   end
 
@@ -52,6 +55,7 @@ RSpec.describe 'Users' do
     within '.column' do
       fill_in 'event_attendance_id', with: event[description]
       fill_in 'event_attendee_id', with: user.name
+      expect(page).to  have_css 'Article', text: 'Fail this one'
     end
   end
 end
