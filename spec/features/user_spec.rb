@@ -55,7 +55,7 @@ RSpec.describe 'Users' do
     within '.column' do
       fill_in 'event_attendance_id', with: event[description]
       fill_in 'event_attendee_id', with: user.name
-      expect(page).to  have_css 'Article', text: 'Fail this one'
+      expect(page).to have_css 'Article', text: 'Fail this one'
     end
   end
 end

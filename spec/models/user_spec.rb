@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
   let(:new_user) { create(:user) }
 
   describe 'Associations' do
@@ -12,7 +11,6 @@ RSpec.describe User, type: :model do
 
   describe 'Validations' do
     it 'should have a name' do
-      
       expect(new_user).to be_valid
     end
 
