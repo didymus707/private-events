@@ -1,0 +1,71 @@
+[33mcommit e504f0fc4d4897a1bd06d7da785533777cce7809[m[33m ([m[1;36mHEAD -> [m[1;32mft/event_attendance[m[33m, [m[1;31morigin/ft/event_attendance[m[33m)[m
+Author: Adewale Orotayo <didymus7007@gmail.com>
+Date:   Sat Jul 4 01:16:13 2020 +0100
+
+    Scope called with date in events controller and views updated
+
+[33mcommit 69ce72cf04d10a002c3d2360b27c848aa86258dc[m
+Author: Adewale Orotayo <didymus7007@gmail.com>
+Date:   Fri Jul 3 23:00:25 2020 +0100
+
+    Linting fixed
+
+[33mcommit c5b77c2442a5292f975584396bb9792ee94b4d30[m
+Author: Adewale Orotayo <didymus7007@gmail.com>
+Date:   Fri Jul 3 22:39:10 2020 +0100
+
+    scopes, class method, page refactoring
+
+[33mcommit 8329bbc25ee3deb81df70be5ead70322196bb21c[m
+Author: Adewale Orotayo <didymus7007@gmail.com>
+Date:   Fri Jul 3 12:38:03 2020 +0100
+
+    Associations added for event attendance
+
+[33mcommit b1669320bc439bc926ef157b8ab8fd04d594b7ac[m[33m ([m[1;31morigin/ft/events[m[33m, [m[1;32mft/events[m[33m)[m
+Author: Adewale Orotayo <didymus7007@gmail.com>
+Date:   Fri Jul 3 08:58:53 2020 +0100
+
+    Event model, controller and view feature completed
+
+[33mcommit 9f20165a01471cb00492029219a41b721126de52[m
+Author: Adewale Orotayo <didymus7007@gmail.com>
+Date:   Thu Jul 2 23:16:17 2020 +0100
+
+    Events model, controller, views and routes added
+
+[33mcommit 84f3039008653b8268d84e10776c4c4963759bf0[m[33m ([m[1;31morigin/ft/sessions[m[33m, [m[1;32mft/sessions[m[33m)[m
+Author: Adewale Orotayo <didymus7007@gmail.com>
+Date:   Wed Jul 1 18:26:48 2020 +0100
+
+    Sessions Controller added along with sign in and out features
+
+[33mcommit a5a1a9980eb641dcbbf73c9bf81a990682628083[m[33m ([m[1;31morigin/ft/models[m[33m, [m[1;32mft/models[m[33m)[m
+Author: Adewale Orotayo <didymus7007@gmail.com>
+Date:   Mon Jun 29 23:54:41 2020 +0100
+
+    User sign up view added
+
+[33mcommit e4568ba5ec8f3f1471b6aa9634e9e7f079c52f18[m
+Author: Adewale Orotayo <didymus7007@gmail.com>
+Date:   Mon Jun 29 23:48:36 2020 +0100
+
+    Added Homepage Controller and view
+
+[33mcommit ab446111a293399c528b903a91b8b20dff884ccc[m
+Author: Adewale Orotayo <didymus7007@gmail.com>
+Date:   Mon Jun 29 16:50:00 2020 +0100
+
+    Added user model, validation and controller
+
+[33mcommit 5abaea4e8b6e49366a1e79ed1caff00b1b1bcbf0[m[33m ([m[1;31morigin/ft/gems[m[33m, [m[1;32mft/gems[m[33m)[m
+Author: Adewale Orotayo <didymus7007@gmail.com>
+Date:   Sun Jun 28 07:34:04 2020 +0100
+
+    Added gems
+
+[33mcommit 782d4c04b130cfd0c12ca949f39e0f54d38c855b[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/development[m[33m, [m[1;32mmaster[m[33m, [m[1;32mdevelopment[m[33m)[m
+Author: Adewale Orotayo <didymus7007@gmail.com>
+Date:   Sun Jun 28 07:20:43 2020 +0100
+
+    First commit

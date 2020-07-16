@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<div class="section">
+  <div class="container">
+    <div class="columns is-centered ">
+      <div class="column is-four-fifths">
+        <h1 class="title is-size-1 has-text-centered">My Events</h1>
+        <div class="columns">
+          <div class="column is-half">
+            <% @past.each do | event | %>
+              <div class="box gw">
+                <article class="media">
+                  <div class="media-content">
+                    <div class="content">
+                      <% if !current_user %>
+                        <h4>Host</h4>
+                        <p class="has-text-left"><strong><%= event.host.name %></strong></p>
+                      <% end %>
+                      <h5>Event Description</h5>
+                      <p><%= event.description %></p><br />
+                      <div class="columns">
+                        <div class="column is-half">
+                          <h6 class="has-text-left">Date</h6>
+                          <p class="has-text-left"><small><%= event.date %></small></p>
+                          <small class="has-text-left has-text-danger">Event has passed</small>
+                        </div>
+                        <div class="column is-half">
+                          <h6 class="has-text-right">Location</h6>
+                          <p class="has-text-right"><%= event.location %></p>
+                          <p class="has-text-right has-text-light"><%= link_to 'Show', event_path(event.id) %></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="column is-half">
+            <% @upcoming.each do | event | %>
+              <div class="box bg-c">
+                <article class="media">
+                  <div class="media-content">
+                    <div class="content">
+                      <% if !current_user %>
+                        <h4>Host</h4>
+                        <p class="has-text-left"><strong><%= event.host.name %></strong></p>
+                      <% end %>
+                      <h5>Event Description</h5>
+                      <p><%= event.description %></p><br />
+                      <div class="columns">
+                        <div class="column is-half">
+                          <h6 class="has-text-left">Date</h6>
+                          <small><%= event.date %></small>
+                        </div>
+                        <div class="column is-half">
+                          <h6 class="has-text-right">Location</h6>
+                          <p class="has-text-right"><%= event.location %></p>
+                          <!--<p class="has-text-right"><%= link_to 'Show', event_path(event.id) %></p>-->
+                          <%= link_to 'Show', event_path(event.id) %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column is-half">
+            <h6 class="has-text-left"><%= link_to 'All Events', events_path %></h6>
+          </div>
+          <div class="column is-half">
+            <h6 class="has-text-right"><%= link_to 'Back', root_path %></h6>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

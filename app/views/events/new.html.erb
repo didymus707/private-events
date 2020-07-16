@@ -1,0 +1,64 @@
+<div class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-4">
+
+        <h2 class="title is-2">New Event</h2>
+
+        <%= simple_form_for(@event) do |f| %>
+          <%= f.error_notification %>
+            <div id="error-explanation">
+              <ul>
+                <% @event.errors.full_messages.each do |error| %>
+                  <li class="notification"><%= error %></li>
+                <% end %>
+              </ul>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <%= f.input :description,
+                            required: true,
+                            autofocus: true,
+                            input_html: { class: 'textarea' },
+                            wrapper: false,
+                            label_html: { class: 'label' }
+                %>
+              </div>
+            </div>
+            
+            <div class="field">
+              <div class="control">
+                <%= f.input :location,
+                            required: true,
+                            input_html: { class: 'input' },
+                            wrapper: false,
+                            label_html: { class: 'label' }
+                %>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <%= f.input :date,
+                            required: true,
+                            input_html: { class: 'date is-medium' },
+                            wrapper: false,
+                            label_html: { class: 'label' }
+                %>
+              </div>
+            </div>
+           
+            <div class="field">
+              <div class="control">
+                <%= f.button :submit, "Create Event", class: "button is-info is-medium" %>
+              </div>
+            </div>
+
+        <% end %>
+        <br />
+
+      </div>
+    </div>
+  </div>
+</div>

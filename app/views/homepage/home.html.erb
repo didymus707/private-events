@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <main class="nxt-wrap">
+    <div class="main">
+      <h1>Welcome to Eventtes 
+        <% if current_user %><%= current_user.name + ',' %><%end%>
+        where you can Create an Event and invite your friends to partey!!
+      </h1>
+    </div>
+    <% unless logged_in? %>
+      <div class="cta">
+        <ul>
+          <li><a><%= link_to 'Sign Up', new_user_path %></a> if you don't hava an account</li>
+          <li><a><%= link_to 'Sign In', login_path %></a> if you do</li>
+        </ul>
+      </div>
+    <% end %>
+
+      <% if logged_in? %>
+        <div class="tabs is-toggle is-fullwidth is-large mt-1">
+          <ul>
+            <li class="mt-r"><%= link_to 'All Events', events_path %></li>
+            <li class="mt-r"><%= link_to 'My Events', user_path(current_user.id) %></li>
+            <li class="mt-r"><%= link_to 'Attending', '#' %></li>
+          </ul>
+        </div>
+      <% end %>
+
+  </main>
+</div>

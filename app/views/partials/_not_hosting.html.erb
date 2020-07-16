@@ -1,0 +1,6 @@
+<% if current_user.id != event.host_id %>
+  <div class="is-flex jc-spb">
+    <h4 >Host</h4>
+    <p class="is-normal"><strong><%= event.host.name %></strong></p>
+  </div>
+<% end %>
