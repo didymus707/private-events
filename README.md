@@ -8,14 +8,18 @@ This is a site that mimics [EventBrite](http://www.eventbrite.com/). A user can 
 - Rails 6.0.3
 - SQLite
 
+> ## Testing Tools
+- Rspec-Rails
+- Capybara
+- Shoulda-matchers
+- Factory_Bot_Rails
+
 ### Usage
 - Clone this repo into your desired folder
 - change directory into the project folder
 - Run bunlde install to install all gems
 - Fire up rails server with `rails server` in your terminal
 
-
-created to access the forms created and perform actions such as edit and update the forms. 
 
 👤 **Adewale Orotayo**
 
